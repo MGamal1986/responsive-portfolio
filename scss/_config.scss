@@ -1,0 +1,85 @@
+// varibles
+$bgHomeColor: #444; // used for background ground color for body, left and right (with little opcity)
+$activeColor:#ffd400; // color of active links
+$bgHomeOpcityEnable:true; // by defualt true to add opacity of background color oif home page
+$bgHomeOpcity:0.5;
+$bgHomeImage: url();
+$brandImage:url('http://placehold.it/150x150');
+ 
+
+// mixins
+// add background image
+@mixin backImage($image){
+  background-image:$image;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+// adjust background color, opacity and image of home page only
+@mixin background($color,$opacity,$image:url('')){
+    &#home{
+      height:100%;
+      overflow:hidden;
+      @include backImage($image);
+    }
+    &:after{
+        content:'';
+        position:absolute;
+        z-index:-1;
+        top:0;
+        right:0;
+        width:100%;
+        height:100%;
+        @if $bgHomeOpcityEnable {
+        background-color:rgba($color,$bgHomeOpcity)
+        }
+        @else {
+          background-color:$color
+        }
+      }
+}
+// configure container as a flex box align item strech
+@mixin flexStretch{
+  display:flex;
+  flex-flow:row nowrap;
+  align-items:stretch;
+}
+// configure a container as flex box with column direction
+@mixin flexCol{
+  display:flex;
+  flex-direction:column;
+}
+// configure a global mixin for flex container
+@mixin flexGlobal($dir:row,$hrAlign:center,$vrAlign:center){
+  display:flex;
+  flex-flow:#{$dir} nowrap;
+  justify-content:$hrAlign;
+  align-items:$vrAlign;
+}
+// configure mixin for transition
+@mixin easeInOut($time:1s){
+  transition: all #{$time} ease-in-out;
+}
+@mixin easeOut($time:0.5s){
+  transition:all #{$time} ease-out;
+}
+// configure mixin to adjust media query
+@mixin mQMin($size){
+  @media screen and (min-width:#{$size}){
+    @content;
+  }
+}
+@mixin mQMax($size){
+  @media screen and (max-width:#{$size}){
+    @content;
+  }
+}
+// functions
+// create function for color
+@function set-color($color){
+  @if(lightness($color) > 40){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
