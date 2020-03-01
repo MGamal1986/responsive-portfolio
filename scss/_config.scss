@@ -3,8 +3,8 @@ $bgHomeColor: #444; // used for background ground color for body, left and right
 $activeColor:#ffd400; // color of active links
 $bgHomeOpcityEnable:true; // by defualt true to add opacity of background color oif home page
 $bgHomeOpcity:0.5;
-$bgHomeImage: url();
-$brandImage:url('http://placehold.it/150x150');
+$bgHomeImage: url('../images/computer.jpg'); // image for background
+$brandImage:url('../images/profile.png');  // image for profile user
  
 
 // mixins
