@@ -115,29 +115,29 @@ body{
       right:10px;
       top:10px;
       z-index:30;
-      width:33px;
+      width:51px;
       padding:5px;
       .btn-icon{
         span{
           @include easeInOut(0.5s);
           display:block;
           background-color:set-color($bgHomeColor);
-          height:2px;
+          height:4px;
           &:not(:last-child){
-            margin-bottom:4px;
+            margin-bottom:6px;
           }
         }
         &.close{
           span:nth-child(1){
-            -webkit-transform:rotate(45deg) translate(3px,6px);
-                    transform:rotate(45deg) translate(3px,6px);
+            -webkit-transform: rotate(45deg) translate(10px, 8px);
+                    transform: rotate(45deg) translate(10px, 8px);
           }
           span:nth-child(2){
             opacity:0;
           }
           span:nth-child(3){
-            -webkit-transform:rotate(-45deg) translate(2px,-6px);
-                    transform:rotate(-45deg) translate(2px,-6px);
+            -webkit-transform: rotate(-45deg) translate(6px, -4px);
+                    transform: rotate(-45deg) translate(6px, -4px);
           }
         }
       }
