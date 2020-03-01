@@ -14,6 +14,7 @@
 }
 
 body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   @include background($bgHomeColor,$bgHomeOpcity,$bgHomeImage);
 //  start header style
   header{
@@ -149,14 +150,13 @@ body{
   }
 //   start main content style
   .main-content{
-    height:calc(100vh - 40px);
-    padding-top:100px;
-    padding-left:20px;
+    height:100vh;
+    padding:200px 80px 0 80px;
     h1{
       text-transform:capitalize;
       color:set-color($bgHomeColor);
       margin-bottom:10px;
-      font-size:55px;
+      font-size:$fontSize * 3.4;
       span{
         color:$activeColor;
       }
@@ -164,31 +164,24 @@ body{
     h3{
       margin-bottom:5px;
       color:set-color($bgHomeColor);
-      font-size:30px;
+      font-size:$fontSize * 1.25;
       text-transform:capitalize;
+      padding:5px;
+      background-color:rgba($bgHomeColor,0.7);
     }
     .icons{
       padding:10px 0;
       i{
         @include easeInOut(0.3s);
-        margin-right:7px;
+        margin-right:15px;
         color:set-color($bgHomeColor);
         cursor:pointer;
-        font-size:20px;
+        font-size:$fontSize * 1.25;
         &:hover{
           color:$activeColor;
         }
       }
     }
-  }
-//   start footer style
-  footer{
-    text-align:center;
-    height:40px;
-    color:set-color($bgHomeColor);
-    background-color:darken($bgHomeColor,5);
-    line-height:40px;
-    text-transform:uppercase;
   }
 }
 
