@@ -64,13 +64,33 @@ $brandImage:url('../images/profile.png');  // image for profile user
   transition:all #{$time} ease-out;
 }
 // configure mixin to adjust media query
-@mixin mQMin($size){
-  @media screen and (min-width:#{$size}){
+// for extra small screen (smart phones)
+@mixin mXs{
+  @media screen and (max-width:576px){
     @content;
   }
 }
-@mixin mQMax($size){
-  @media screen and (max-width:#{$size}){
+// for  small screen (tables)
+@mixin mSm{
+  @media screen and (max-width:768px){
+    @content;
+  }
+}
+// for medium  screen (small labtop)
+@mixin mMd{
+  @media screen and (max-width:992px){
+    @content;
+  }
+}
+// for large screen (PC)
+@mixin mXs{
+  @media screen and (max-width:1200px){
+    @content;
+  }
+}
+// for extra large screen (TV, ..)
+@mixin mXs{
+  @media screen and (min-width:1201px){
     @content;
   }
 }

@@ -1,0 +1,31 @@
+/*
+** This file used for responsive ( small screen)
+**
+*/
+
+body{
+    .left-content,.right-content{
+        @include mSm{
+            float:none !important;
+            width:100% !important;
+        }
+    }
+    .left-content{
+        @include mSm{
+            height:30vh !important;
+            transform:translateX(-100%) !important;
+        }
+        &.show{
+            transform:translateX(0) !important;
+        }
+    }
+    .right-content{
+        @include mSm{
+            height:70vh !important;
+            transform:translateX(100%) !important;
+        }
+        &.show{
+            transform:translateX(0) !important;
+        }
+    }
+}
