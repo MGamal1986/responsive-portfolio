@@ -227,7 +227,14 @@ body{
       .bio{
         grid-area:bio;
         h4{
-          color:set-color($activeColor);
+          color:$activeColor;
+          text-transform: uppercase;
+          font-size: $fontSize * 1.5;
+          font-weight:normal;
+        }
+        p{
+          color:$parColor;
+          font-size:$fontSize
         }
       }
       .portfolio{

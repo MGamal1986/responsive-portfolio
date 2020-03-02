@@ -251,7 +251,14 @@ body .about-content .info .bio {
   grid-area: bio;
 }
 body .about-content .info .bio h4 {
-  color: #000;
+  color: #ffd400;
+  text-transform: uppercase;
+  font-size: 37.5px;
+  font-weight: normal;
+}
+body .about-content .info .bio p {
+  color: #fff;
+  font-size: 25px;
 }
 body .about-content .info .job1 {
   grid-area: job1;
