@@ -18,6 +18,10 @@ body#home {
   background-position: center center;
   background-repeat: no-repeat;
 }
+body#about-info {
+  min-height: 100%;
+  background-color: #444;
+}
 body:after {
   content: "";
   position: absolute;
@@ -31,7 +35,7 @@ body:after {
 body header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 5;
 }
 body header .nav-menu {
@@ -142,7 +146,7 @@ body header .btn-expand {
   cursor: pointer;
   position: absolute;
   display: inline-block;
-  right: 10px;
+  right: 40px;
   top: 10px;
   z-index: 30;
   width: 51px;
@@ -285,6 +289,20 @@ body footer {
 **
 */
 @media screen and (max-width: 768px) {
+  body .main-content {
+    padding: 100px 40px 0 40px !important;
+  }
+  body .main-content h1 {
+    font-size: 37.5px !important;
+  }
+  body .main-content h3 {
+    font-size: 25px !important;
+  }
+  body .main-content .icons i {
+    font-size: 25px !important;
+  }
+}
+@media screen and (max-width: 768px) {
   body .left-content, body .right-content {
     float: none !important;
     width: 100% !important;
@@ -295,18 +313,39 @@ body footer {
     height: 30vh !important;
     transform: translateX(-100%) !important;
   }
+  body .left-content.show {
+    transform: translateX(0) !important;
+  }
 }
-body .left-content.show {
-  transform: translateX(0) !important;
+@media screen and (max-width: 768px) {
+  body .left-content .portait-image {
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
 @media screen and (max-width: 768px) {
   body .right-content {
     height: 70vh !important;
     transform: translateX(100%) !important;
   }
+  body .right-content.show {
+    transform: translateX(0) !important;
+  }
 }
-body .right-content.show {
-  transform: translateX(0) !important;
+@media screen and (max-width: 768px) {
+  body .about-content {
+    padding: 100px 40px 0 40px !important;
+  }
+  body .about-content h1 {
+    font-size: 37.5px !important;
+  }
+  body .about-content h3 {
+    font-size: 25px !important;
+  }
+  body .about-content .info {
+    grid-template-areas: "image" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

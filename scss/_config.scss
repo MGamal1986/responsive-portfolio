@@ -24,6 +24,10 @@ $parColor:#fff; // paragraph color
       overflow:hidden;
       @include backImage($image);
     }
+    &#about-info{
+      min-height:100%;
+      background-color:$bgHomeColor;
+    }
     &:after{
         content:'';
         position:absolute;

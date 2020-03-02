@@ -4,6 +4,22 @@
 */
 
 body{
+    .main-content{
+        @include mSm{
+            padding: 100px 40px 0 40px !important;
+            h1{
+                font-size: $fontSize * 1.5 !important;
+            }
+            h3{
+                font-size: $fontSize !important;
+            }
+            .icons{
+                i{
+                    font-size: $fontSize !important;  
+                }
+            }
+        }
+    }
     .left-content,.right-content{
         @include mSm{
             float:none !important;
@@ -14,18 +30,41 @@ body{
         @include mSm{
             height:30vh !important;
             transform:translateX(-100%) !important;
+            &.show{
+                transform:translateX(0) !important;
+            }
         }
-        &.show{
-            transform:translateX(0) !important;
+        .portait-image{
+            @include mSm{
+                width:150px !important;
+                height:150px !important;
+            } 
         }
     }
     .right-content{
         @include mSm{
             height:70vh !important;
             transform:translateX(100%) !important;
+            &.show{
+                transform:translateX(0) !important;
+            }
         }
-        &.show{
-            transform:translateX(0) !important;
+        
+    }
+    .about-content{
+        @include mSm{
+            padding: 100px 40px 0 40px !important;
+            h1{
+                font-size: $fontSize * 1.5 !important;
+            }
+            h3{
+                font-size: $fontSize !important;
+            }
+            .info{
+                grid-template-areas: 'image' 'bio' 'job1' 'job2' 'job3';
+                grid-template-columns: 1fr;
+            }
         }
+        
     }
 }
