@@ -58,7 +58,7 @@ $fontSize:25px;
   align-items:$vrAlign;
 }
 // configure mixin for transition
-@mixin easeInOut($time:1s){
+@mixin easeInOut($time:0.7s){
   transition: all #{$time} ease-in-out;
 }
 @mixin easeOut($time:0.5s){

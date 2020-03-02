@@ -15,6 +15,7 @@
 
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
   @include background($bgHomeColor,$bgHomeOpcity,$bgHomeImage);
 //  start header style
   header{
@@ -86,8 +87,8 @@ body{
         text-decoration:none;
         color:set-color($bgHomeColor);
         text-transform:capitalize;
-        font-size:25px;
-        font-weight:bold;
+        font-size:$fontSize * 1.25;
+        font-weight:normal !important;
         &:hover{
           color:$activeColor;
           -webkit-transform:scale(1.3);
@@ -157,6 +158,7 @@ body{
       color:set-color($bgHomeColor);
       margin-bottom:10px;
       font-size:$fontSize * 3.4;
+      font-weight:normal !important;
       span{
         color:$activeColor;
       }
@@ -168,6 +170,7 @@ body{
       text-transform:capitalize;
       padding:5px;
       background-color:rgba($bgHomeColor,0.7);
+      font-weight:normal !important;
     }
     .icons{
       padding:10px 0;
@@ -182,6 +185,73 @@ body{
         }
       }
     }
+  }
+  // style for about page
+  .about-content{
+    min-height:calc(100vh - 50px);
+    padding:100px 80px;
+    h1{
+      text-transform:capitalize;
+      color:set-color($bgHomeColor);
+      margin-bottom:10px;
+      font-size:$fontSize * 3.4;
+      font-weight:normal !important;
+      span{
+        color:$activeColor;
+      }
+    }
+    h3{
+      margin-bottom:5px;
+      color:set-color($bgHomeColor);
+      font-size:$fontSize * 1.25;
+      text-transform:capitalize;
+      padding:5px;
+      background-color:rgba($bgHomeColor,0.7);
+      font-weight:normal !important;
+    }
+    .info{
+      margin-top:20px;
+      display: grid;
+      grid-gap: 30px;
+      grid-template-areas: 'image bio bio' 'job1 job2 job3';
+      grid-template-columns: repeat(3, 1fr);
+      img{
+        grid-area:image;
+        overflow:hidden;
+        border-radius:50%;
+        border:2px solid $activeColor;
+        width:200px;
+        height:200px;
+        margin:auto;
+      }
+      .bio{
+        grid-area:bio;
+        h4{
+          color:set-color($activeColor);
+        }
+      }
+      .portfolio{
+        
+      }
+      .job1{
+        grid-area:job1;
+      }
+      .job2{
+        grid-area:job2;
+      }
+      .job3{
+        grid-area:job3;
+      }
+      
+    }
+    
+  }
+  footer{
+    color:set-color($bgHomeColor);
+    height:50px;
+    @include flexGlobal;
+    background-color:darken($bgHomeColor, 10%);
+    text-transform: capitalize;;
   }
 }
 
