@@ -334,7 +334,7 @@ body footer {
 }
 @media screen and (max-width: 768px) {
   body .about-content {
-    padding: 100px 40px 0 40px !important;
+    padding: 100px 40px !important;
   }
   body .about-content h1 {
     font-size: 37.5px !important;

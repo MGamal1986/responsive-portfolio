@@ -53,7 +53,7 @@ body{
     }
     .about-content{
         @include mSm{
-            padding: 100px 40px 0 40px !important;
+            padding: 100px 40px !important;
             h1{
                 font-size: $fontSize * 1.5 !important;
             }
