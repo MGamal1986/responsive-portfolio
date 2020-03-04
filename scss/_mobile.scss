@@ -61,8 +61,12 @@ body{
                 font-size: $fontSize !important;
             }
             .info{
-                grid-template-areas: 'image' 'bio' 'job1' 'job2' 'job3';
-                grid-template-columns: 1fr;
+                // grid-template-areas: 'image' 'bio' 'job1' 'job2' 'job3';
+                // grid-template-columns: 1fr;
+                display:block;
+                img,.bio,.portfolio{
+                    margin-bottom:20px;
+                }
             }
         }
         

@@ -213,7 +213,7 @@ body .main-content .icons i:hover {
   color: #ffd400;
 }
 body .about-content {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 70px);
   padding: 100px 80px;
 }
 body .about-content h1 {
@@ -232,7 +232,7 @@ body .about-content h3 {
   font-size: 31.25px;
   text-transform: capitalize;
   padding: 5px;
-  background-color: rgba(68, 68, 68, 0.7);
+  background-color: #494949;
   font-weight: normal !important;
 }
 body .about-content .info {
@@ -240,7 +240,6 @@ body .about-content .info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas: "image bio bio" "job1 job2 job3";
-  grid-template-columns: repeat(3, 1fr);
 }
 body .about-content .info img {
   grid-area: image;
@@ -264,6 +263,25 @@ body .about-content .info .bio p {
   color: #fff;
   font-size: 25px;
 }
+body .about-content .info .portfolio {
+  border-bottom: 2px solid #ffd400;
+  padding: 25px;
+  background-color: #515151;
+  color: #fff;
+}
+body .about-content .info .portfolio h5 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+body .about-content .info .portfolio h6 {
+  font-size: 18.75px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+body .about-content .info .portfolio p {
+  line-height: 1.4;
+}
 body .about-content .info .job1 {
   grid-area: job1;
 }
@@ -274,8 +292,9 @@ body .about-content .info .job3 {
   grid-area: job3;
 }
 body footer {
+  font-size: 25px;
   color: #fff;
-  height: 50px;
+  height: 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -343,8 +362,10 @@ body footer {
     font-size: 25px !important;
   }
   body .about-content .info {
-    grid-template-areas: "image" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr;
+    display: block;
+  }
+  body .about-content .info img, body .about-content .info .bio, body .about-content .info .portfolio {
+    margin-bottom: 20px;
   }
 }
 

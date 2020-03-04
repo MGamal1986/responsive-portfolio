@@ -188,7 +188,7 @@ body{
   }
   // style for about page
   .about-content{
-    min-height:calc(100vh - 50px);
+    min-height:calc(100vh - 70px);
     padding:100px 80px;
     h1{
       text-transform:capitalize;
@@ -206,7 +206,8 @@ body{
       font-size:$fontSize * 1.25;
       text-transform:capitalize;
       padding:5px;
-      background-color:rgba($bgHomeColor,0.7);
+      // background-color:rgba($bgHomeColor,0.7);
+      background-color:lighten($bgHomeColor, 2);
       font-weight:normal !important;
     }
     .info{
@@ -214,7 +215,7 @@ body{
       display: grid;
       grid-gap: 30px;
       grid-template-areas: 'image bio bio' 'job1 job2 job3';
-      grid-template-columns: repeat(3, 1fr);
+      // grid-template-columns: repeat(3, 1fr);
       img{
         grid-area:image;
         overflow:hidden;
@@ -238,7 +239,23 @@ body{
         }
       }
       .portfolio{
-        
+        border-bottom:2px solid $activeColor;
+        padding:25px;
+        background-color:lighten($bgHomeColor,5);
+        color:set-color($bgHomeColor);
+        h5{
+          font-size:$fontSize;
+          font-weight:normal;
+          margin-bottom:15px;
+        }
+        h6{
+          font-size:$fontSize * 0.75;
+          font-weight:normal;
+          margin-bottom:15px;
+        }
+        p{
+          line-height: 1.4;
+        }
       }
       .job1{
         grid-area:job1;
@@ -254,8 +271,9 @@ body{
     
   }
   footer{
+    font-size:$fontSize;
     color:set-color($bgHomeColor);
-    height:50px;
+    height:70px;
     @include flexGlobal;
     background-color:darken($bgHomeColor, 10%);
     text-transform: capitalize;;
