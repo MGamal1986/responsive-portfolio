@@ -293,6 +293,38 @@ body .about-content .info .job2 {
 body .about-content .info .job3 {
   grid-area: job3;
 }
+body .work-content {
+  min-height: calc(100vh - 70px);
+  padding: 100px 80px;
+}
+body .work-content h1 {
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 85px;
+  font-weight: normal !important;
+}
+body .work-content h1 span {
+  color: #ffd400;
+}
+body .work-content h3 {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 31.25px;
+  text-transform: capitalize;
+  padding: 5px;
+  background-color: #494949;
+  font-weight: normal !important;
+}
+body .work-content .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  grid-template-rows: repeat(2, 200px);
+}
+body .work-content .content .item {
+  border: 1px solid #fff;
+}
 body footer {
   font-size: 25px;
   color: #fff;
