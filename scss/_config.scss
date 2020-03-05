@@ -20,12 +20,14 @@ $parColor:#fff; // paragraph color
 // adjust background color, opacity and image of home page only
 @mixin background($color,$opacity,$image:url('')){
     &#home{
-      height:100%;
+      height:100vh;
       overflow:hidden;
       @include backImage($image);
     }
     &#about-info{
-      min-height:100%;
+      background-color:$bgHomeColor;
+    }
+    &#work{
       background-color:$bgHomeColor;
     }
     &:after{

@@ -22,4 +22,10 @@ function toggleClass(){
   menuItem.forEach(function(item){
     item.classList.toggle('show');
   });
+
+
+  // add href attribute for menu links
+  $('.menu-link').each(function(){
+    
+  })
 }

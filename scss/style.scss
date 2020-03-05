@@ -38,7 +38,7 @@ body{
       .left-content{
       @include flexGlobal;
       @include easeInOut;
-      background-color:rgba($bgHomeColor,0.7);
+      background-color:rgba($bgHomeColor,0.8);
       -webkit-transform:translateY(100%);
               transform:translateY(100%);
       .portait-image{
@@ -60,7 +60,7 @@ body{
       @include easeInOut;
       -webkit-transform:translateY(-100%);
               transform:translateY(-100%);
-      background-color:rgba($bgHomeColor,0.2);
+      background-color:rgba($bgHomeColor,0.9);
       .menu{
         width:100%;
         text-align:center;
@@ -269,6 +269,10 @@ body{
       
     }
     
+  }
+  // style for work page
+  .work-content{
+
   }
   footer{
     font-size:$fontSize;
