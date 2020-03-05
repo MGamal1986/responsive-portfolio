@@ -23,14 +23,7 @@ $parColor:#fff; // paragraph color
       height:100vh;
       overflow:hidden;
       @include backImage($image);
-    }
-    &#about-info{
-      background-color:$bgHomeColor;
-    }
-    &#work{
-      background-color:$bgHomeColor;
-    }
-    &:after{
+      &:after{
         content:'';
         position:absolute;
         z-index:-1;
@@ -45,6 +38,14 @@ $parColor:#fff; // paragraph color
           background-color:$color
         }
       }
+    }
+    &#about-info{
+      background-color:rgba($bgHomeColor,0.7);
+    }
+    &#work{
+      background-color:rgba($bgHomeColor,0.7);
+    }
+    
 }
 // configure container as a flex box align item strech
 @mixin flexStretch{
