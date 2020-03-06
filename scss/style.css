@@ -34,6 +34,9 @@ body#about-info {
 body#work {
   background-color: rgba(68, 68, 68, 0.7);
 }
+body#contact {
+  background-color: rgba(68, 68, 68, 0.7);
+}
 body header {
   position: fixed;
   top: 0;
@@ -355,6 +358,59 @@ body .work-content .content .item .btn-light {
 body .work-content .content .item i {
   margin-right: 5px;
 }
+body .contact-content {
+  min-height: calc(100vh - 70px);
+  padding: 100px 80px;
+}
+body .contact-content h1 {
+  text-transform: capitalize;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 85px;
+  font-weight: normal !important;
+}
+body .contact-content h1 span {
+  color: #ffd400;
+}
+body .contact-content h3 {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 31.25px;
+  text-transform: capitalize;
+  padding: 5px;
+  background-color: #494949;
+  font-weight: normal !important;
+}
+body .contact-content .content {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+body .contact-content .content div {
+  font-size: 25px;
+  font-weight: bold;
+  border: 2px solid #fff;
+  padding: 1.5rem 7.5rem;
+  margin-bottom: 30px;
+  color: #fff;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+body .contact-content .content div:hover {
+  padding: 1rem 6rem;
+  background: #ffd400;
+  color: #000;
+}
+body .contact-content .content div:hover span {
+  color: #000;
+}
+body .contact-content .content div span {
+  color: #ffd400;
+  text-transform: capitalize;
+  margin-right: 10px;
+}
 body footer {
   font-size: 25px;
   color: #fff;
@@ -371,6 +427,11 @@ body footer {
 ** This file used for responsive ( small screen)
 **
 */
+@media screen and (max-width: 1200px) {
+  #work .content {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
 @media screen and (max-width: 992px) {
   #work .content {
     grid-template-columns: repeat(2, 1fr) !important;
