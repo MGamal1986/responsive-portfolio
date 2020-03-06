@@ -320,10 +320,40 @@ body .work-content .content {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
-  grid-template-rows: repeat(2, 200px);
+  margin-top: 30px;
 }
-body .work-content .content .item {
-  border: 1px solid #fff;
+body .work-content .content .item img {
+  width: 100%;
+  height: auto;
+  border: 3px solid #fff;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+body .work-content .content .item img:hover {
+  opacity: 0.5;
+}
+body .work-content .content .item .btn, body .work-content .content .item .btn-light, body .work-content .content .item .btn-dark {
+  display: block;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+body .work-content .content .item .btn:hover, body .work-content .content .item .btn-light:hover, body .work-content .content .item .btn-dark:hover {
+  background: #ffd400;
+  color: #000;
+}
+body .work-content .content .item .btn-dark {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+body .work-content .content .item .btn-light {
+  background-color: #5e5e5e;
+  color: #fff;
+}
+body .work-content .content .item i {
+  margin-right: 5px;
 }
 body footer {
   font-size: 25px;
@@ -341,6 +371,16 @@ body footer {
 ** This file used for responsive ( small screen)
 **
 */
+@media screen and (max-width: 992px) {
+  #work .content {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  #work .content {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
 @media screen and (max-width: 768px) {
   body .main-content {
     padding: 100px 40px 0 40px !important;

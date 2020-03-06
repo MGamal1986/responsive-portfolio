@@ -297,12 +297,43 @@ body{
       display:grid;
       grid-template-columns: repeat(4,1fr);
       grid-gap:30px;
-      grid-template-rows: repeat(2,200px);
+      margin-top:30px;
       .item{
-        border:1px solid #fff;
-      }
-      .item1{
-
+        img{
+          width:100%;
+          height:auto;
+          border:3px solid #fff;
+          cursor:pointer;
+          @include easeOut;
+          &:hover{
+            opacity: 0.5;
+          }
+        }
+        .btn{
+          display:block;
+          padding:15px 20px;
+          margin-bottom:10px;
+          text-decoration:none;
+          cursor:pointer;
+          @include easeOut;
+          &:hover{
+            background:$activeColor;
+            color:#000
+          }
+        }
+        .btn-dark{
+          @extend .btn;
+          background-color:darken($bgHomeColor, 10);
+          color:set-color($bgHomeColor);
+        }
+        .btn-light{
+          @extend .btn;
+          background-color:lighten($bgHomeColor, 10);
+          color:set-color($bgHomeColor);
+        }
+        i{
+          margin-right:5px;
+        }
       }
     }
   }

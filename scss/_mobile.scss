@@ -2,6 +2,39 @@
 ** This file used for responsive ( small screen)
 **
 */
+// for TV
+@include mXl{
+
+}
+
+// for large screen 
+@include mLg{
+
+}
+// for small labtops
+@include mMd{
+    #work{
+        .content{
+            grid-template-columns: repeat(2,1fr) !important;
+        }
+    }
+}
+// for tablets
+@include mSm{
+    #work{
+        .content{
+            grid-template-columns: repeat(1,1fr) !important;
+        }
+    }
+}
+// for smart phone
+@include mXs{
+
+}
+
+
+
+
 
 body{
     .main-content{

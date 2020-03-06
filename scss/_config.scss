@@ -92,13 +92,13 @@ $parColor:#fff; // paragraph color
   }
 }
 // for large screen (PC)
-@mixin mXs{
+@mixin mLg{
   @media screen and (max-width:1200px){
     @content;
   }
 }
 // for extra large screen (TV, ..)
-@mixin mXs{
+@mixin mXl{
   @media screen and (min-width:1201px){
     @content;
   }
