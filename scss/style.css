@@ -431,6 +431,10 @@ body footer {
   #work .content {
     grid-template-columns: repeat(3, 1fr) !important;
   }
+
+  #contact .contact-content .content > div {
+    padding: 1rem 6rem !important;
+  }
 }
 @media screen and (max-width: 992px) {
   #work .content {
