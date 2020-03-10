@@ -438,69 +438,74 @@ body footer {
   }
 }
 @media screen and (max-width: 768px) {
+  #work .work-content h1 {
+    font-size: 37.5px !important;
+  }
+  #work .work-content h3 {
+    font-size: 25px !important;
+  }
   #work .content {
     grid-template-columns: repeat(1, 1fr) !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .main-content {
-    padding: 100px 40px 0 40px !important;
-  }
-  body .main-content h1 {
+
+  #about-info .about-content h1 {
     font-size: 37.5px !important;
   }
-  body .main-content h3 {
+  #about-info .about-content h3 {
     font-size: 25px !important;
   }
-  body .main-content .icons i {
+  #about-info .about-content .info {
+    display: block !important;
+  }
+  #about-info .about-content .info img, #about-info .about-content .info .bio, #about-info .about-content .info .portfolio {
+    margin-bottom: 20px;
+  }
+
+  #home .main-content {
+    padding: 100px 40px 0 40px !important;
+  }
+  #home .main-content h1 {
+    font-size: 37.5px !important;
+  }
+  #home .main-content h3 {
     font-size: 25px !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .left-content, body .right-content {
+  #home .main-content .icons i {
+    font-size: 25px !important;
+  }
+
+  header .left-content, header .right-content {
     float: none !important;
     width: 100% !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .left-content {
+  header .left-content {
     height: 30vh !important;
     transform: translateX(-100%) !important;
   }
-  body .left-content.show {
+  header .left-content.show {
     transform: translateX(0) !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .left-content .portait-image {
+  header .left-content .portait-image {
     width: 150px !important;
     height: 150px !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .right-content {
+  header .right-content {
     height: 70vh !important;
     transform: translateX(100%) !important;
   }
-  body .right-content.show {
+  header .right-content.show {
     transform: translateX(0) !important;
   }
-}
-@media screen and (max-width: 768px) {
-  body .about-content {
-    padding: 100px 40px !important;
-  }
-  body .about-content h1 {
+
+  #contact .contact-content h1 {
     font-size: 37.5px !important;
   }
-  body .about-content h3 {
+  #contact .contact-content h3 {
     font-size: 25px !important;
   }
-  body .about-content .info {
-    display: block;
-  }
-  body .about-content .info img, body .about-content .info .bio, body .about-content .info .portfolio {
-    margin-bottom: 20px;
+  #contact .contact-content .content > div {
+    padding: 1rem 6rem !important;
+    font-size: 20px;
   }
 }
 
